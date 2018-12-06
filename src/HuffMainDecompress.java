@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.*;
 
 public class HuffMainDecompress {
+	
 	public static void main(String[] args) {
 		
 		System.out.println("Huffman Decompress Main");
@@ -25,5 +26,7 @@ public class HuffMainDecompress {
 		long diff = 8*(outf.length() - inf.length());
 		long diff2 = bos.bitsWritten() - bis.bitsRead();
 		System.out.printf("%d compared to %d\n",diff,diff2);
+		
+
 	}
 }
