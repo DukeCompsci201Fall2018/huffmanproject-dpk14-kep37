@@ -131,9 +131,7 @@ public class HuffProcessor {
 	return freqs;
 }
 	
-	
-	
-		/**
+	/**
 	 * Decompresses a file. Output file must be identical bit-by-bit to the
 	 * original.
 	 *
@@ -155,7 +153,7 @@ public class HuffProcessor {
 	}
 	
 	
-public void readCompressedBits(HuffNode root, BitInputStream in, BitOutputStream out) {
+private void readCompressedBits(HuffNode root, BitInputStream in, BitOutputStream out) {
 	HuffNode current = root; 
 	   while (current!= null) {
 	       int bits = in.readBits(1);
@@ -178,7 +176,7 @@ public void readCompressedBits(HuffNode root, BitInputStream in, BitOutputStream
 		
 	}
 
-public HuffNode readTreeHeader(BitInputStream in) {	
+private HuffNode readTreeHeader(BitInputStream in) {	
 	int bit=in.readBits(1);
 	if (bit== -1) throw new HuffException("");
 	if (bit == 0) {
